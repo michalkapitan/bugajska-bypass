@@ -24,28 +24,11 @@ Aplikacja webowa optymalizująca czas przejazdu w relacji Częstochowa -> Olszty
 
 ---
 
-## Scenariusz 1: Uruchomienie lokalne na komputerze (Windows)
+## Uruchomienie lokalne na komputerze (Windows)
 
 1. Pobierz i zainstaluj Python ze strony `https://www.python.org/downloads/` (podczas instalacji zaznacz pole **Add python.exe to PATH**).
 2. Umieść pliki `main.py`, `requirements.txt` oraz `uruchom.bat` w jednym folderze.
 3. Kliknij dwukrotnie plik `uruchom.bat`. Skrypt zainstaluje zależności i otworzy aplikację pod adresem `http://localhost:8000`.
-
----
-
-## Scenariusz 2: Darmowe wdrożenie w chmurze Render.com (dostęp z telefonu przez LTE/5G)
-
-Uwaga: Przeglądarki mobilne wymagają szyfrowanego połączenia HTTPS do działania modułu GPS (`navigator.geolocation`). Platforma Render.com zapewnia certyfikat HTTPS automatycznie.
-
-1. Utwórz darmowe konto w serwisie GitHub (`https://github.com`) i stwórz nowe repozytorium publiczne o nazwie `bugajska-bypass`.
-2. Prześlij do repozytorium pliki `main.py` oraz `requirements.txt`.
-3. Zaloguj się w serwisie Render (`https://render.com`) za pomocą konta GitHub.
-4. Kliknij **New +** -> **Web Service** i połącz swoje repozytorium `bugajska-bypass`.
-5. Ustaw parametry wdrożenia:
-   - **Runtime:** `Python 3`
-   - **Build Command:** `pip install -r requirements.txt`
-   - **Start Command:** `uvicorn main:app --host 0.0.0.0 --port $PORT`
-   - **Instance Type:** `Free`
-6. Kliknij **Create Web Service**. Po zakończeniu budowy otrzymasz stały adres `https://twoja-nazwa.onrender.com`.
 
 ---
 
